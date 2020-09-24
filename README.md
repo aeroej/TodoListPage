@@ -30,7 +30,6 @@ Local에서만 작업하여 Putty 서버에서 컴파일 시 에러가 너무 �
 - [x] src/api, assets, router, views 폴더 추가
 - [x] todo_table의 모든 데이터를 html table로 출력
 - [x] POST 기능을 Ajax로 구현 | ID만 받아옴
-
 - [ ] index.js를 api폴더로 옮기기
 - [ ] "192.168.1.70:3001/test" 페이지를 루트 페이지로 수정
 
@@ -38,3 +37,5 @@ Local에서만 작업하여 Putty 서버에서 컴파일 시 에러가 너무 �
 #### 9월 25일
 - [ ] Sequelize로 MariaDB 연동
 - [ ] UI 꾸미기
+
+
