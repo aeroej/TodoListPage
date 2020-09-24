@@ -4,6 +4,9 @@
 - [x] MySQL Table 생성
 - [x] Router 폴더 생성, 리팩토링
 
+```
+Name, Tel, Email 데이터를 받아오는 예제 연습
+```
 
 #### 9월 22일
 - [x] POST형식으로 받은 데이터를 DB에 추가하는 기능 구현 (Email 예제. email.js와 form.html 수정)
@@ -25,6 +28,9 @@ Local에서만 작업하여 Putty 서버에서 컴파일 시 에러가 너무 �
 - [x] MySQL 대신에 MariaDB Setting 후 간단한 쿼리문 실행(select * from todo_table)
 - [x] PORT 이해
 
+```
+DB 관련 백엔드를 우선 개발
+```
 
 #### 9월 24일
 - [x] src/api, assets, router, views 폴더 추가
@@ -33,6 +39,9 @@ Local에서만 작업하여 Putty 서버에서 컴파일 시 에러가 너무 �
 - [ ] index.js를 api폴더로 옮기기
 - [ ] "192.168.1.70:3001/test" 페이지를 루트 페이지로 수정
 
+```
+DB 데이터 출력, 
+```
 
 #### 9월 25일
 - [ ] Sequelize로 MariaDB 연동
