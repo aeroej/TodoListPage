@@ -26,3 +26,9 @@ app.use('/', main)
 
 app.set('views', __dirname + '/router');
 app.set('view engine', 'ejs');
+
+
+
+app.get('/api', function(req,res){
+  res.sendFile(__dirname + "/router/ajax.js")
+})

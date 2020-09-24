@@ -6,13 +6,13 @@ const router = express.Router();
 
 
 // DB
-const mariadb= require('mariadb');
+const mariadb = require('mariadb');
 const pool = mariadb.createPool({
-  host     : '192.168.1.70',
-  port : 5507,
-  user     : 'ejkim',
-  password : 'ejkim',
-  database : 'my_todo'
+    host: '192.168.1.70',
+    port: 5507,
+    user: 'ejkim',
+    password: 'ejkim',
+    database: 'my_todo'
 });
 
 
@@ -47,27 +47,27 @@ const http = require('http');
 
 
 
-router.get('/test', (req, res) =>{
-    fs.readFile(__dirname + '/list.html', null, (err, data) => {
-        if(err){ 
+router.get('/test', (req, res) => {
+    fs.readFile(__dirname + '/index.ejs', null, (err, data) => {
+        if (err) {
             console.log('error');
             throw err;
         }
-        else{
+        else {
             console.log("data :" + data);
             pool.getConnection()
-                .then (conn => {
+                .then(conn => {
                     console.log("Connect MariaDB!")
                     conn.query('select * from todo_table')
-                    .then(rows => {
-                        console.log(rows);
-                        res.render('.', {prodList : rows})
-                        // return conn.query("INSERT INTO todo_table values (8, 'task', '2020-09-08', 1, 0, 0)");
-                    })
-                    .catch(err => {
-                        console.log(err);
-                        conn.release();
-                    })
+                        .then(rows => {
+                            console.log(rows);
+                            res.render('.', { prodList: rows })
+                            // return conn.query("INSERT INTO todo_table values (8, 'task', '2020-09-08', 1, 0, 0)");
+                        })
+                        .catch(err => {
+                            console.log(err);
+                            conn.release();
+                        })
                 })
                 .catch(err => {
                     console.log(err)
@@ -76,26 +76,70 @@ router.get('/test', (req, res) =>{
         }
     })
 
-
-
-        // pool.getConnection()
-        //     .then (conn => {
-        //         console.log("Connect MariaDB!")
-        //         conn.query('select id, task from todo_table')
-        //         .then(rows => {
-        //             console.log(rows);
-        //             res.send(ejs.render(data, {prodList : results}))
-        //             // return conn.query("INSERT INTO todo_table values (8, 'task', '2020-09-08', 1, 0, 0)");
-        //         })
-        //         .catch(err => {
-        //             conn.release();
-        //         })
-        //     })
-        //     .catch(err => {
-        //         console.log(err)
-        //         conn.release();
-        //     })
 })
+
+
+
+
+router.post('/test/ajax', (req,res) =>{
+    console.log(req.body.id);
+    var responseData = {'result':'ok','id':req.body.id}
+
+    pool.getConnection()
+        .then(conn => {
+            console.log("INSERT DATA")
+            return conn.query(`INSERT INTO todo_table values (${req.body.id}, 'test', '2020-09-08', 0, 0, 0)`);
+        })
+        .catch(err => {
+            console.log(err)
+            console.log("NOOOOOOOOOOOOOOOOOOOOOOO")
+            conn.release();
+        })
+
+
+
+
+    
+    // res.json(responseData)
+})
+
+
+
+router.post('/test/post', (req, res) => {
+    console.log(req.body.id);
+    pool.getConnection()
+        .then(conn => {
+            console.log("INSERT DATA")
+            conn.query(`INSERT INTO todo_table values (${req.body.id}, 'test', '2020-09-08', 0, 0, 0)`);
+        })
+        .catch(err => {
+            console.log(err)
+            console.log("NOOOOOOOOOOOOOOOOOOOOOOO")
+            conn.release();
+        })
+
+})
+
+
+
+
+// pool.getConnection()
+//     .then (conn => {
+//         console.log("Connect MariaDB!")
+//         conn.query('select id, task from todo_table')
+//         .then(rows => {
+//             console.log(rows);
+//             res.send(ejs.render(data, {prodList : results}))
+//             // return conn.query("INSERT INTO todo_table values (8, 'task', '2020-09-08', 1, 0, 0)");
+//         })
+//         .catch(err => {
+//             conn.release();
+//         })
+//     })
+//     .catch(err => {
+//         console.log(err)
+//         conn.release();
+//     })
 
 
 // router.get('/', (req, res) =>{
@@ -110,7 +154,7 @@ router.get('/test', (req, res) =>{
 // })
 
 const path = require('path');
-router.get('/', (req, res)=>{
+router.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, '../views/index.html'));
 })
 
