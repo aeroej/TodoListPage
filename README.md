@@ -46,5 +46,5 @@ DB 데이터 출력, 추가
 #### 9월 25일
 - [ ] Sequelize로 MariaDB 연동
 - [ ] UI 꾸미기
-
+- [ ] map 알아보기
 
