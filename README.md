@@ -36,14 +36,17 @@ DB 관련 백엔드를 우선 개발
 - [x] src/api, assets, router, views 폴더 추가
 - [x] todo_table의 모든 데이터를 html table로 출력
 - [x] POST 기능을 Ajax로 구현 | ID만 받아옴
-- [ ] index.js를 api폴더로 옮기기
-- [ ] "192.168.1.70:3001/test" 페이지를 루트 페이지로 수정
+- [x] "192.168.1.70:3001/test" 페이지를 루트 페이지로 수정
 
 ```
 DB 데이터 출력, 추가
 ```
 
 #### 9월 25일
+- [x] Upgrade DB Insert Form. Modify DB Column Type. (DATE >> DATETIME, Priority INT >> INT with Min 0 Max 10)
+- [x] Add DB Delete Function by del_flag. (default : 0, delete : 1)
+
+- [ ] index.js를 api폴더로 옮기기 / 코드 정리
 - [ ] Sequelize로 MariaDB 연동
 - [ ] UI 꾸미기
 - [ ] map 알아보기
