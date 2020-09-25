@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon src/index.js"
+    "start": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -19,8 +19,7 @@
   "homepage": "https://github.com/asd0755/ToDo-List-Page#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-generator": "^4.16.1",
-    "mysql": "^2.18.1"
+    "express-generator": "^4.16.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
