@@ -10,6 +10,7 @@
     <!-- <a href='/insert'>Insert Data</a> -->
     <hr>
 
+<<<<<<< HEAD
     <!-- name이 또 중복되면 안됨;;
     <form action="/delete" method="post">
         id : <input type="text" name="id"><br>
@@ -93,6 +94,44 @@
 
 
     </script> -->
+=======
+
+    <form action="/test/post" method="post">
+        id : <input type="text" name="id"><br>
+        task : <input type="text" name="task"><br>
+        due_date : <input type="text" name="due_date"><br>
+        priority : <input type="text" name="priority"><br>
+        <input type="submit" value="Submit">
+    </form>
+    <button class="ajax">ajax</button>
+    <div class="result"></div>
+    <hr>
+
+
+
+
+    <table width="100%" border="1">
+        <tr>
+            <th>Num</th>
+            <th>Task</th>
+            <th>Due Date</th>
+            <th>Priority</th>
+            <th>Status</th>
+        </tr>
+        <% prodList.forEach(function(item, index){ %>
+        <tr>
+            <!-- <td><a href='/delete/<%= item.id %>' >DELETE</a></td>
+         <td><a href='/edit/<%= item.id %>' >EDIT</a></td> -->
+            <td><%= item.id %></td>
+            <td><%= item.task %></td>
+            <td><%= item.due_date %></td>
+            <td><%= item.priority %></td>
+            <td><%= item.status %></td>
+        </tr>
+        <% }); %>
+    </table>
+    <script src="api"></script>
+>>>>>>> 2c3e0f25acddfa63509d1692608e93f0d2dd858f
 
 </body>
 
