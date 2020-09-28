@@ -45,8 +45,12 @@ DB 데이터 출력, 추가
 #### 9월 25일
 - [x] Upgrade DB Insert Form. Modify DB Column Type. (DATE >> DATETIME, Priority INT >> INT with Min 0 Max 10)
 - [x] Add DB Delete Function by del_flag. (default : 0, delete : 1)
-- [ ] index.js를 api폴더로 옮기기 / 코드 정리
-- [ ] Sequelize로 MariaDB 연동
+
+#### 9월 28일~
+- [x] index.js를 api폴더로 옮기기 / 코드 정리
+- [ ] Sequelize로 MariaDB 연동 ??
 - [ ] UI 꾸미기
-- [ ] map 알아보기
+- [ ] map 등 JS문법 공부
+- [ ] 새로고침없이 데이터로딩 eventListener('load', () => { ... })
+- [ ] /delete/:id 적용방법
 
