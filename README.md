@@ -52,7 +52,7 @@ DB 데이터 출력, 추가
 - [ ] Sequelize로 MariaDB 연동 ??
 - [ ] UI 꾸미기
 
-######코드리뷰
+#####코드리뷰
 - [ ] map 등 JS문법 공부
 - [ ] 새로고침없이 데이터로딩 eventListener('load', () => { ... })
 - [ ] /delete/:id 적용방법
