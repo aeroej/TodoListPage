@@ -15,9 +15,10 @@ function getData() {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url);
         xhr.setRequestHeader('Content-Type', "application/json");
-        xhr.send(inputData);
+        xhr.send(inputData); 
         xhr.addEventListener('load', function () {
             console.log(xhr.responseText);
+
             var result = JSON.parse(xhr.responseText);
             if (result.result != "ok") return;
             var resultData = "Successfully submitted !!";
@@ -47,7 +48,7 @@ function deleteData() {
         var xhr = new XMLHttpRequest();
         xhr.open('POST', url);
         xhr.setRequestHeader('Content-Type', "application/json");
-        xhr.send(inputData);
+        xhr.send(inputData); 
         xhr.addEventListener('load', function () {
             /*
             console.log(xhr.responseText);
@@ -86,7 +87,7 @@ function deleteData() {
 
 
 
-// function deleteData() {
+// function deleteData() {    
 //     document.querySelector('.delete').addEventListener('click', function () {
 //         var deleteElements = document.getElementsByName("delete");
 
@@ -121,7 +122,7 @@ function deleteData() {
 //                 console.log(item.value);
 //                 alert(item.value);
 //                 arr.push(item.value)
-//             }
+//             }  
 //         });
 
 //         // var xhr = new XMLHttpRequest();
@@ -144,3 +145,4 @@ function deleteData() {
 
 
 
+        
