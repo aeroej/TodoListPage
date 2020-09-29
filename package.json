@@ -19,7 +19,9 @@
   "homepage": "https://github.com/asd0755/ToDo-List-Page#readme",
   "dependencies": {
     "express": "^4.17.1",
-    "express-generator": "^4.16.1"
+    "express-generator": "^4.16.1",
+    "sequelize": "^5.9.5",
+    "sequelize-cli": "^5.5.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.4"
