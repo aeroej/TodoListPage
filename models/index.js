@@ -32,9 +32,10 @@ Object.keys(db).forEach(modelName => {
 });
 
 sequelize
+// DB Table 가져오기
   .authenticate()
   .then(() => {
-    console.log('Connection has been established successfully.');
+    console.log('Connection has been established successfully!!');
   })
   .catch(err => {
     console.error('Unable to connect to the database:', err);
@@ -42,5 +43,8 @@ sequelize
 
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
+
+db.Todo = require('./todo_table')(sequelize, Sequelize);
+
 
 module.exports = db;

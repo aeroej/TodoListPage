@@ -4,7 +4,7 @@ const app = express();
 // port
 const PORT = 3001;
 app.listen(PORT, () => {
-  console.log(`Server listening port ${PORT}`);
+  console.log(`Server listening port ${PORT}!!`);
 });
 
 // app.use
@@ -19,10 +19,15 @@ app.use('/views', express.static(__dirname + '/views'))
 app.use('/db', express.static(__dirname + '/db'))
 
 // ROUTER
-const main = require('./router/index.js')
-app.use('/', main)
+const main = require('./router/index.js');
+app.use('/', main);
 
-const sequelize = require('../models/index.js')
+const todo_table = require('./router/todo_table.js');
+app.use('/todo_table', todo_table)
+
+// sequelize
+const sequelize = require('../models/index.js').sequelize;
+sequelize.sync();
 
 // ejs template engine
 app.set('views', __dirname + '/views');

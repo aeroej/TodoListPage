@@ -29,9 +29,10 @@ router.get('/', (req, res) => {
             pool.getConnection()
                 .then(conn => {
                     console.log("Connect MariaDB!")
-                    conn.query('select * from todo_table where del_flag=0')
+                    conn.query('select * from todo_tables where del_flag=0')
                         .then(rows => {
-                            console.log(rows);
+                            // console.log(rows);
+                            console.log("Select * from todo_tables");
                             res.render('.', { prodList: rows })
                         })
                         .catch(err => {
@@ -56,7 +57,7 @@ router.post('/ajax', (req, res) => {
     pool.getConnection()
         .then(conn => {
             console.log("INSERT DATA")
-            return conn.query("INSERT INTO todo_table(task, due_date, priority, status, del_flag) values ( ?, ?, ?, ?, ?)", [req.body.task, req.body.date, req.body.priority, req.body.status, 0]);
+            return conn.query("INSERT INTO todo_tables(task, due_date, priority, status, del_flag) values ( ?, ?, ?, ?, ?)", [req.body.task, req.body.date, req.body.priority, req.body.status, 0]);
         })
         .catch(err => {
             console.log(err)
@@ -80,7 +81,7 @@ router.post('/delete', (req, res) => {
         pool.getConnection()
         .then(conn => {
             console.log("Connect MariaDB!")
-            conn.query('UPDATE todo_table SET del_flag=1 where id=?', [item])
+            conn.query('UPDATE todo_tables SET del_flag=1 where id=?', [item])
         })
         .catch(err => {
             console.log(err)
