@@ -1,6 +1,10 @@
 
 module.exports = (sequelize, DataTypes) => {
     return sequelize.define('todo_table', {
+      id: {
+        type: DataTypes.INTEGER,
+        primaryKey: true,
+      },
       task: {
         type: DataTypes.STRING,
         allowNull: false,
@@ -15,6 +19,15 @@ module.exports = (sequelize, DataTypes) => {
         type: DataTypes.INTEGER,
         allowNull: true,
       },
+
+      status: {
+        type: DataTypes.STRING,
+        allowNull: true,
+      },
+
+      del_flag: {
+        type: DataTypes.BOOLEAN,
+      }
     }, {
       timestamps: false,
     });

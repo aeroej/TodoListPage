@@ -47,4 +47,6 @@ db.Sequelize = Sequelize;
 db.Todo = require('./todo_table')(sequelize, Sequelize);
 
 
+db.Op = Sequelize.Op
+
 module.exports = db;
