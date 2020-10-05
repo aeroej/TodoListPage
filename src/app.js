@@ -16,12 +16,13 @@ app.use('/api', express.static(__dirname + '/api'))
 app.use('/assets', express.static(__dirname + '/assets'))
 app.use('/router', express.static(__dirname + '/router'))
 app.use('/views', express.static(__dirname + '/views'))
+app.use('/db', express.static(__dirname + '/db'))
 
 // ROUTER
 const main = require('./router/index.js')
 app.use('/', main)
 
-
+const sequelize = require('../models/index.js')
 
 // ejs template engine
 app.set('views', __dirname + '/views');

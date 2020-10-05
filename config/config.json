@@ -1,10 +1,11 @@
 {
   "development": {
-    "username": "root",
-    "password": null,
-    "database": "database_development",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
+    "username": "ejkim",
+    "password": "ejkim",
+    "database": "my_todo",
+    "host": "192.168.1.70",
+    "port": 5507,
+    "dialect": "mariadb",
     "operatorsAliases": false
   },
   "test": {
