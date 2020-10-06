@@ -80,4 +80,4 @@ MariaDB가 아닌 SQLite 기반의 Sequelize 튜토리얼을 참고해 삽질한
 
 
 #### 10월 6일
-- [ ] postman, client(본인 컴퓨터 DB나 아무 클라이언트 프로그램 사용) 등
+- [x] postman, client(본인 컴퓨터 DB나 아무 클라이언트 프로그램 사용) 등
