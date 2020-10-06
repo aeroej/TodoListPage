@@ -70,6 +70,9 @@ DB 데이터 출력, 추가
 #### 9월 29일
 - [x] Sequelize 설치(v.5.x.x)
 
+```
+MariaDB가 아닌 SQLite 기반의 Sequelize 튜토리얼을 참고해 삽질한 날 
+```
 
 #### 10월 5일
 - [x] sequelize에서 쓰기 위해 todo DB 테이블 model 작성(js)
