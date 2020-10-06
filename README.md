@@ -56,9 +56,22 @@ DB 데이터 출력, 추가
 - [ ] 새로고침없이 데이터로딩 eventListener('load', () => { ... })
 - [ ] /delete/:id 적용방법
 
+```
+<해야할 일>
+1. Sequelize 설치(v.5.x.x)
+2. sequelize에서 쓰기 위해 todo DB 테이블 model 작성(js)
+3. Sequelize로 데이터쿼리
+4. postman, client(본인 컴퓨터 DB나 아무 클라이언트 프로그램 사용) 등
+```
 
 #### 9월 29일
 - [x] Sequelize 설치(v.5.x.x)
+
+
+#### 10월 5일
 - [x] sequelize에서 쓰기 위해 todo DB 테이블 model 작성(js)
 - [x] Sequelize로 데이터쿼리
+
+
+#### 10월 6일
 - [ ] postman, client(본인 컴퓨터 DB나 아무 클라이언트 프로그램 사용) 등
