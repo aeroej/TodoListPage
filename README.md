@@ -59,6 +59,6 @@ DB 데이터 출력, 추가
 
 #### 9월 29일
 - [x] Sequelize 설치(v.5.x.x)
-- [ ] sequelize에서 쓰기 위해 todo DB 테이블 model 작성(js)
-- [ ] Sequelize로 데이터쿼리
+- [x] sequelize에서 쓰기 위해 todo DB 테이블 model 작성(js)
+- [x] Sequelize로 데이터쿼리
 - [ ] postman, client(본인 컴퓨터 DB나 아무 클라이언트 프로그램 사용) 등
