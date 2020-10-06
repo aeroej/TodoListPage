@@ -51,10 +51,13 @@ DB 데이터 출력, 추가
 - [x] index.js를 api폴더로 옮기기 / 코드 정리
 - [ ] Sequelize로 MariaDB 연동 ??
 - [ ] UI 꾸미기
-#### 코드리뷰
-- [ ] map 등 JS문법 공부
-- [ ] 새로고침없이 데이터로딩 eventListener('load', () => { ... })
-- [ ] /delete/:id 적용방법
+
+```
+<코드리뷰>
+1. map 등 JS문법 공부
+2. 새로고침없이 데이터로딩 eventListener('load', () => { ... })
+3. /delete/:id 적용방법
+```
 
 ```
 <해야할 일>
